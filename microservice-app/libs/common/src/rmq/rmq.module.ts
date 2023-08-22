@@ -1,6 +1,8 @@
 import {Module} from "@nestjs/common";
+import {RmqService} from "@app/common";
 
-@Module({})
-export class RmqModule {
-
-}
+@Module({
+    providers: [RmqService],
+    exports: [RmqService]
+})
+export class RmqModule {}
